@@ -4,13 +4,19 @@ Vue.use(VueRouter);
 
 const routes = [{
     path: "/",
+    name: "Index",
+    component: () =>
+      import("../views/Index.vue")
+  },
+  {
+    path: "/home",
     name: "Home",
     component: () =>
       import("../views/Home.vue")
   },
   {
     path: "/vuex",
-    name: "Home",
+    name: "vuex",
     component: () =>
       import("../views/Vuex.vue")
   },

@@ -25,7 +25,7 @@ module.exports = {
 
     //配置css
     css: {
-        extract: IS_PROD,
+        /* extract: IS_PROD,
         requireModuleExtension: true, // 去掉文件名中的 .module
         loaderOptions: {
             postcss: {
@@ -37,6 +37,25 @@ module.exports = {
                     })
                 ],
             },
+        } */
+        loaderOptions: {
+            postcss: {
+                plugins: [
+                    require("autoprefixer")({
+                        // 配置使用 autoprefixer
+                        overrideBrowserslist: ["last 15 versions"]
+                    }),
+                    require("postcss-pxtorem")({
+                        rootValue: 37.5, // 换算的基数 vant是基准尺寸是375，如果要保持vant的原有样式就必须是37.5配置，如果设计图是750，请除以2再写样式。
+                        // 忽略转换正则匹配项。插件会转化所有的样式的px。比如引入了三方UI，也会被转化。目前我使用 selectorBlackList字段，来过滤
+                        //如果个别地方不想转化px。可以简单的使用大写的 PX 或 Px 。
+                        selectorBlackList: ["ig"],
+                        propList: ["*"],
+                        //exclude: /node_modules/
+                        exclude: /node_modules|folder_name/i
+                    })
+                ]
+            }
         }
     },
 
