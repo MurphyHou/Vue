@@ -12,7 +12,7 @@ import {
 
 Vue.config.productionTip = false
 Vue.use(Toast)
-//Vue.use(Button)
+Vue.use(Button)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

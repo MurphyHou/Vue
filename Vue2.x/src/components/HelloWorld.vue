@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <van-button type="primary">Button</van-button>
+    <!-- <van-button type="primary">Button</van-button> -->
   </div>
 </template>
 
