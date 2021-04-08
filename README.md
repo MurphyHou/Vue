@@ -41,6 +41,22 @@
    git reset --hard "版本号git log"
    ```
 
+## Vue脚手架
+1. vue-cli3.0和vue-cli4.0
+   ```
+   npm install -g @vue/cli
+   ```
+   ```
+   vue create my-project
+   ```
+2. vue2.0桥接工具
+   ```
+   npm install -g @vue/cli-init
+   ```
+   ```
+   vue init webpack my-project
+   ```
+
 
 
 
