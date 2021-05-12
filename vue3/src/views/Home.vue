@@ -21,11 +21,13 @@
 
 <script>
   // @ is an alias to /src
+  import { get } from '../assets/utils/httpService.js'
   import defaultComponent from '@/components/defaultComponent.vue'
   import {
     ref,
     toRefs,
-    reactive
+    reactive,
+    onMounted
   } from 'vue'
 
   export default {
@@ -39,6 +41,7 @@
       }
     },
     setup() {
+      //let { proxy } = getCurrentInstance();
       let count = ref(0);
       let book = ref('Java');
       function myFn() {
@@ -67,6 +70,12 @@
         userInfo,
         addUser
       } = addUserInfo(state);
+      
+      onMounted(()=>{
+        get('http://poetry.apiopen.top/getTime').then(res =>{
+          console.log(res);
+        })
+      })
 
       return {
         book,
