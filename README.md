@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-08 16:21:05
+ * @LastEditTime: 2021-06-02 10:12:35
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue3e:\Github\Vue\README.md
+-->
 # Vue   
 - 本练习项目基于Vue-cli4.0脚手架开发  
 - Vue2.0脚手架已被我废弃，如需要请重新创建vue-cli2.0的脚手架，此vue-cli2.0已无法正常运行  
@@ -40,6 +48,15 @@
    ```
    git reset --hard "版本号git log"
    ```
+7. 创建分支：  
+ + 切换到基础分支，如主干：git checkout master  
+  
+ + 创建并切换到新分支：git checkout -b panda  
+ + git branch可以看到已经在panda分支上
+ + 更新分支代码并提交：  
+ + git add *    
+ + git commit -m "init panda"   
+ + git push origin panda  
 
 ## Vue脚手架
 1. vue-cli3.0和vue-cli4.0
